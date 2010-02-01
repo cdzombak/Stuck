@@ -1,0 +1,6 @@
+* Interface like http://stikked.com/
+* export new mysql structure
+* no longer need cron
+* search codebase for @TODO
+* make snipurl optional
+* fix copy to clipboard
