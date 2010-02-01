@@ -113,8 +113,8 @@ INSERT INTO `languages` (`code`, `description`) VALUES
 CREATE TABLE IF NOT EXISTS `pastes` (
   `id` int(10) NOT NULL auto_increment,
   `pid` varchar(8) character set utf8 collate utf8_unicode_ci NOT NULL,
-  `title` varchar(32) character set utf8 collate utf8_unicode_ci NOT NULL,
-  `name` varchar(32) character set utf8 collate utf8_unicode_ci NOT NULL,
+  `title` varchar(128) character set utf8 collate utf8_unicode_ci NOT NULL,
+  `name` varchar(64) character set utf8 collate utf8_unicode_ci NOT NULL,
   `lang` varchar(32) character set utf8 collate utf8_unicode_ci NOT NULL,
   `private` tinyint(1) NOT NULL,
   `paste` longtext character set utf8 collate utf8_unicode_ci NOT NULL,

@@ -212,7 +212,13 @@ class Pastes extends Model
 
 			if($query->num_rows() > 0)
 			{
-				return true;
+				$paste = $query->row_array();
+				if ( $paste['expire'] < time() && $paste['expire'] != 0 ) {
+					$this->db->delete('pastes',array('pid'=>$paste['pid']));
+					return FALSE;
+				} else {
+					return TRUE;
+				}
 			}
 			else
 			{
@@ -258,6 +264,7 @@ class Pastes extends Model
 			$data['url'] = site_url('view/'.$row['pid']);
 			$data['raw'] = $row['raw'];
 			$data['snipurl'] = $row['snipurl'];
+			$data['filename'] = $row['filename'];
 			$inreply = $row['replyto'];
 		}
 		

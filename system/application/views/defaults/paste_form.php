@@ -29,7 +29,7 @@
 					<span class="instruction">What's your name?</span>
 				</label>
 				
-				<?php $set = array('name' => 'name', 'id' => 'name', 'value' => $name_set, 'maxlength' => '32', 'tabindex' => '1');
+				<?php $set = array('name' => 'name', 'id' => 'name', 'value' => $name_set, 'maxlength' => '64', 'tabindex' => '1');
 				echo form_input($set);?>
 			</div>
 			
@@ -38,7 +38,7 @@
 					<span class="instruction">Give your paste a title.</span>
 				</label>
 				
-				<input value="<?php if(isset($title_set)){ echo $title_set; }?>" type="text" id="title" name="title" tabindex="2" size="50" />
+				<input value="<?php if(isset($title_set)){ echo $title_set; }?>" type="text" id="title" name="title" tabindex="2" size="50" maxlength="128" />
 			</div>
 																		
 			<div class="item last">
