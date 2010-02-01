@@ -46,10 +46,13 @@ $route['scaffolding_trigger'] = "";
 $route['cron/:any'] = "main/cron";
 
 $route['view/raw/:any'] = 'main/raw/';
+$route['view/download/:any'] = 'main/download/';
 $route['view/options'] = 'main/view_options';
 $route['view/:any'] = 'main/view';
+
 $route['lists'] = 'main/lists';
 $route['lists/:num'] = 'main/lists/$1';
+
 $route['about'] = 'main/about';
 
 $route['iphone/:num'] = 'iphone';

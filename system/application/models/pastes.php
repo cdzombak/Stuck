@@ -87,6 +87,8 @@ class Pastes extends Model
 		{
 			$data['title'] = $this->config->item('unknown_title'); 
 		}
+		
+		$data['filename'] = $this->generateFilename($data['title'], $data['lang']);
 
 		$data['private'] = $this->input->post('private');
 		
@@ -94,7 +96,7 @@ class Pastes extends Model
 		
 			if($this->input->post('private'))
 			{
-				$data['pid'] = substr(md5(md5(rand())), 0, 8);
+				$data['pid'] = substr(md5(rand()), 0, 8);
 			}
 			else
 			{
@@ -156,7 +158,7 @@ class Pastes extends Model
 			$data['snipurl'] = false;
 		}
 		else
-		{						
+		{
 			$target = 'http://snipr.com/site/snip?r=simple&link='.site_url('view/'.$data['pid']);
 			$ch = curl_init();
 			curl_setopt($ch, CURLOPT_URL, $target);
@@ -178,6 +180,16 @@ class Pastes extends Model
 		return 'view/'.$data['pid'];
 	}
 	
+	function generateFilename($name, $type) {
+		// @TODO fix this function to work correctly
+		$special_chars = array("?","[","]","/","\\","=","+","<",">",":",";",",","'");
+		$name = str_replace($special_chars,"",$name);
+		$name = str_replace(' ','_',$name);
+		$name = trim($name,".");
+		$name = substr($name,0,127); 
+		$name .= '.' . strtolower($type);
+		return $name;
+	}
 	
 	/** 
 	* Checks if a paste exists
