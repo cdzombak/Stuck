@@ -21,9 +21,9 @@
 					<h1><a href="<?=base_url()?>" class="title"><?php echo $this->config->item('site_name');?></a></h1>
 					<ul class="tabs">
 						<?php $l = $this->uri->segment(1)?>
-						<li><a <?php if($l == ""){ echo 'class="active"'; }?> href="<?=base_url()?>" title="Create A New Paste">Create</a></li>
-						<li><a <?php if($l == "lists" || $l == "view" and $this->uri->segment(2) != "options"){ echo 'class="active"'; }?> href="<?=site_url("lists")?>" title="Recent Pastes">Recent</a></li>
-						<li><a  <?php if($l == "about"){ echo 'class="active"'; }?> href="<?=site_url("about/")?>" title="About Paste.mycodenow.com">About</a></li>
+						<li><a <?php if($l == ''){ echo 'class="active"'; }?> href="<?=base_url()?>" title="Create A New Paste">Create</a></li>
+						<li><a <?php if($l == 'lists' || $l == "view" && $this->uri->segment(2) != 'options'){ echo 'class="active"'; }?> href="<?=site_url("lists")?>" title="Recent Pastes">Recent</a></li>
+						<li><a <?php if($l == 'view' && $this->uri->segment(2) == 'options'){ echo 'class="active"'; }?> href="<?=site_url("view/options/")?>" title="Viewing Options">Options</a></li>
 					</ul>
 				</div>
 

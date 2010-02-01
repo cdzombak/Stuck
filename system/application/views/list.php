@@ -1,5 +1,4 @@
 <?php $this->load->view('defaults/header');?>
-<small><a class="control" href="<?php echo site_url("view/options")?>">Change paste viewing options</a></small><br/><br/>
 <h1>Recent Pastes</h1>
 
 		<?php 
@@ -36,7 +35,7 @@
 				</tbody>
 			</table> 
 		<?} else { ?>
-			<p>There have been no pastes :(</p>
+			<p>No recent pastes to display.</p>
 		<? }?>
 <?=$pages?>
 <div class="spacer"></div>

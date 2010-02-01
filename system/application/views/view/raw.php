@@ -22,8 +22,7 @@
 				<a href="<?=site_url("view/".$pid)?>">Go Back</a>
 			<?php } else { ?>
 				<a href="<?=base_url()?>">Go Home</a>
-			<?php }?> 
-			&mdash; <a href="<?=site_url("view/options")?>">Change Paste Viewing Options</a>
+			<?php }?>
 			<pre>
 <?=$raw?>
 			</pre>
