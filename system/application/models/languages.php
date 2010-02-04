@@ -85,6 +85,19 @@ class Languages extends Model
 		return $data;
 	}
 	
+	function getExtension($code) {
+		$this->db->select('extension');
+		$this->db->where('code', $code);
+		$query = $this->db->get('languages');
+		
+		if($query->num_rows() > 0) {
+			foreach($query->result_array() as $row) {
+				return $row['extension'];
+			}
+		} else {
+			return false;
+		}
+	}
 	
 	/** 
 	* Takes a language code eg. php, cpp, html4 and converts it to its description eg. PHP, C++, Html 4 (Strict).

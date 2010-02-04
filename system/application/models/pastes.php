@@ -88,7 +88,7 @@ class Pastes extends Model
 			$data['title'] = $this->config->item('unknown_title'); 
 		}
 		
-		$data['filename'] = $this->generateFilename($data['title'], $data['lang']);
+		$data['filename'] = $this->generateFilename($data['title'], $this->languages->getExtension($data['lang']));
 
 		$data['private'] = $this->input->post('private');
 		

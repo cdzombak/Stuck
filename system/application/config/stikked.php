@@ -13,6 +13,8 @@
  */
 $config['site_name'] = "Paste";
 
+$config['defaultFileType'] = 'text';
+
 /**
  * Key for Cron
  *

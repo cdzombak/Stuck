@@ -50,10 +50,14 @@ class Main extends Controller
 	* @see view()
 	*/	
 	
-	function _form_prep($lang='php', $title = '', $paste='', $reply=false)
+	function _form_prep($lang=NULL, $title = '', $paste='', $reply=false)
 	{
 		$this->load->model('languages');
-		$this->load->helper("form");
+		$this->load->helper('form');
+		
+		// This is a hack since CI doesn't like me to use $this->config->item('defaultFileType')
+		// in the method definition.
+		if ($lang === NULL) $lang = $this->config->item('defaultFileType');
 		
 		$data['languages']   = $this->languages->get_languages(Languages::LANGUAGES_MAIN);
 		$data['languages'][] = '-------------------------';
@@ -78,7 +82,7 @@ class Main extends Controller
 			$data['title_set'] = $title;
 			$data['reply'] = $reply;
 
-			if($lang != 'php' or ($lang == 'php' and $this->db_session->userdata('lang') == false))
+			if($lang != $this->config->item('defaultFileType') or ($lang == $this->config->item('defaultFileType') and $this->db_session->userdata('lang') == false))
 			{
 				$data['lang_set'] = $lang;
 			}
