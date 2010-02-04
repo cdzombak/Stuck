@@ -1,14 +1,16 @@
-* search codebase for @TODO
-* make snipurl optional/fix it
+* Project name, licensing, github
+* Fix iPhone view issues, change iPhone view to Mobile View
 * fix copy to clipboard (disable if using Flash 10+)
+* add View Parent link to paste actions menu
+* search codebase for @TODO
+* Update models
+* upgrae CI
+* upgrade jQuery, clipboard helper
+* new coding conventions
 * Confirm when someone wants to post as anon
 * option for public read-only access; require key to post
+* make snipurl optional/fix it/integrate with my shortURL app
 * language ordering in the DB
-* AJAX interaction
-* Fix iPhone view issues
-* change iPhone view to Mobile View
-* new coding conventions
-* integrate with my shortURL app
 
 Markup/CSS/Appearance:
 * nicer fonts, especially for titles
