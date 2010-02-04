@@ -10,27 +10,22 @@
 
 /**
  * Site Name
- * 
- * The name of your site
- *
-*/
-$config['site_name'] = "Stikked";
+ */
+$config['site_name'] = "Paste";
 
 /**
  * Key for Cron
  *
  * The password required to run the cron job
- *
-**/
+ */
 $config['cron_key'] = "";
 
 /**
  * Pastes Per Page
  *
  * Number of pastes per page, on the recent pastes listings.
- *
-**/
-$config['per_page'] = 10;
+ */
+$config['per_page'] = 15;
 
 /**
  * Name for anonymous poster
@@ -39,8 +34,7 @@ $config['per_page'] = 10;
  * DO NOT SET BLANK
  * Set to random for a random paste to be generated
  * NOTE: if changed only pastes from then on will be updated.
- *
-**/
+ */
 $config['unknown_poster'] = "random";
 
 /**
@@ -48,20 +42,17 @@ $config['unknown_poster'] = "random";
  *
  * What name is to be set for untitled pastes.
  * DO NOT SET BLANK
- * NOTE: if changed only pastes from then on will be updated.
-**/
+ * NOTE: Past untitled posts will not be updated to reflect any changes here.
+ */
 $config['unknown_title'] = "Untitled";
 
-/**
- *
- *
- *  Words used for when unknown_poster is set to random
- *
- *
-**/
 
+/**
+ *  Words used for when unknown_poster is set to random
+ */
 $config['nouns'] = array('Hornbill', 'Elephant', 'Bison', 'Lion', 'Camel', 'Sheep',
-'Monkey', 'Prairie Dog', 'Plover', 'Tapir', 'Capybara', 'Cheetah', 'Flamingo', 'Peccary', 'Eider',	'Porcupine', 'Pelican', 'Dove', 'Crane', 'Tortoise', 'Agouti',
+'Monkey', 'Prairie Dog', 'Plover', 'Tapir', 'Capybara', 'Cheetah', 'Flamingo', 'Peccary', 'Eider',
+'Porcupine', 'Pelican', 'Dove', 'Crane', 'Tortoise', 'Agouti',
 'Tamarin', 'Pheasant', 'Owl', 'Gibbon', 'Goose', 'Baboon', 'Hamerkop', 'Zebra',
 'Macaw', 'Gibbon', 'Madrill', 'Wolf', 'Stork', 'Armadillo', 'Ostrich', 'Marmoset',
 'Lizard', 'Panda', 'Giraffe', 'Cassowary', 'Kangaroo', 'Gorilla', 'Pheasant',
