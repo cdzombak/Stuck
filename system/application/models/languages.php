@@ -23,7 +23,9 @@
 
 class Languages extends Model 
 {
-
+	const LANGUAGES_MAIN      = 1;
+	const LANGUAGES_SECONDARY = 0;
+	
 	/** 
 	* Class Constructor
 	*
@@ -67,8 +69,10 @@ class Languages extends Model
 	* @access public
 	*/
 	
-	function get_languages()
+	function get_languages($langSet = self::LANGUAGES_MAIN)
 	{
+		$this->db->where('isMain', $langSet);
+		$this->db->order_by('description', 'asc');
 		$query = $this->db->get('languages');
 		
 		$data = array();
@@ -76,10 +80,6 @@ class Languages extends Model
 		foreach($query->result_array() as $row)
 		{
 			$data[$row['code']] = $row['description'];
-			if($row['code'] == 'text')
-			{
-				$data["0"] = "-----------------";
-			}
 		}
 		
 		return $data;

@@ -1,6 +1,15 @@
-* Interface like http://stikked.com/
-* export new mysql structure
+* Interface more like http://stikked.com/
+* export new mysql structure, languages
 * no longer need cron
 * search codebase for @TODO
 * make snipurl optional
 * fix copy to clipboard
+* generate download filenames better
+* Reply to private posts should automatically be set to Private
+* Nicer reply handling
+* Confirm when someone wants to post as anon
+* option for public read-only access; require key to post
+* language ordering in the DB
+* AJAX interaction
+* Fix iPhone view issues
+* change iPhone view to Mobile View

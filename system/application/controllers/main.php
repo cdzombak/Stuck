@@ -55,7 +55,10 @@ class Main extends Controller
 		$this->load->model('languages');
 		$this->load->helper("form");
 		
-		$data['languages'] = $this->languages->get_languages();		
+		$data['languages']   = $this->languages->get_languages(Languages::LANGUAGES_MAIN);
+		$data['languages'][] = '-------------------------';
+		$data['languages']   = array_merge($data['languages'], $this->languages->get_languages(Languages::LANGUAGES_SECONDARY));
+		
 		$data['scripts'] = array('jquery.js', 'jquery.timers.js');
 		
 		if(!$this->input->post('submit'))
