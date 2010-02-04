@@ -40,15 +40,15 @@
 				
 				<input value="<?php if(isset($title_set)){ echo $title_set; }?>" type="text" id="title" name="title" tabindex="2" size="50" maxlength="128" />
 			</div>
-																		
+			
 			<div class="item last">
 				<label for="lang">Language
 					<span class="instruction">What language is your paste written in?</span>
 				</label>
 				
 				<?php $lang_extra = 'id="lang" class="select" tabindex="3"'; echo form_dropdown('lang', $languages, $lang_set, $lang_extra); ?>
-			</div>								
-		</div>							
+			</div>
+		</div>
 		
 		<div class="item">
 			<label for="paste">Your paste
@@ -56,7 +56,7 @@
 			</label>
 			
 			<textarea name="code" cols="40" rows="20" tabindex="4"><?php if(isset($paste_set)){ echo $paste_set; }?></textarea>
-		</div>																											
+		</div>
 		
 		<div class="item_group">
 			<div class="item">

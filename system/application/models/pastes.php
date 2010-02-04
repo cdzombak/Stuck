@@ -238,7 +238,7 @@ class Pastes extends Model
 	*/
 	
 	function getPaste($seg=2, $replies=false)
-	{	
+	{
 		if($this->uri->segment($seg) == '')
 		{
 			redirect('');
@@ -248,13 +248,13 @@ class Pastes extends Model
 			$pid = $this->uri->segment($seg);
 			$data['script'] = 'jquery.js'; 
 		}
-			
+		
 		$this->db->where('pid', $pid);
 		$query = $this->db->get('pastes');
 		
 		foreach ($query->result_array() as $row)
 		{
-		    $data['title'] = $row['title'];
+			$data['title'] = $row['title'];
 			$data['pid'] = $row['pid'];
 			$data['name'] = $row['name'];
 			$data['lang_code'] = $row['lang'];

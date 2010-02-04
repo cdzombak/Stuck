@@ -68,7 +68,7 @@ class Main extends Controller
 			$data['name_set'] = $this->db_session->userdata('name');
 			$data['expire_set'] = $this->db_session->userdata('expire');
 			$data['acopy_set'] = $this->db_session->userdata('acopy');
-			$data['private_set'] = $this->db_session->userdata('private');			
+			$data['private_set'] = $this->db_session->userdata('private');
 			$data['snipurl_set'] = $this->db_session->userdata('snipurl');
 			$data['remember_set'] = $this->db_session->userdata('remember');
 			$data['paste_set'] = $paste;
@@ -89,7 +89,7 @@ class Main extends Controller
 			$data['name_set'] = $this->input->post('name');
 			$data['expire_set'] = $this->input->post('expire');
 			$data['acopy_set'] = $this->input->post('acopy');
-			$data['private_set'] = $this->input->post('private');			
+			$data['private_set'] = $this->input->post('private');
 			$data['snipurl_set'] = $this->input->post('snipurl');
 			$data['remember_set'] = $this->input->post('remember');
 			$data['paste_set'] = $this->input->post('paste');
@@ -255,7 +255,7 @@ class Main extends Controller
 	
 	function view() 
 	{
-		$this->load->model('pastes');	
+		$this->load->model('pastes');
 
 		$check = $this->pastes->checkPaste(2);
 				
