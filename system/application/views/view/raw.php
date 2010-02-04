@@ -12,22 +12,32 @@
 		<?}}?>
 	</head>
 	<body>
+	
 		<div id="container">
 			<?php if(isset($insert)){
 				echo $insert;
 			}?>
 			
-			<h1><?=$title?></h1>
+			<h1><? if ($private) { ?><img src="<?=base_url()?>static/images/icons/lock.png" class="icon" alt="This paste is private." title="This paste is private." /><? } ?><?=$title?></h1>
+			
 			<?php if(!$this->db_session->userdata("view_raw")){?>
-				<a href="<?=site_url("view/".$pid)?>">Go Back</a>
+				<a href="<?=site_url("view/".$pid)?>"><img src="<?=base_url()?>static/images/icons/arrow_left.png" class="icon" /> Go Back</a>
 			<?php } else { ?>
-				<a href="<?=base_url()?>">Go Home</a>
+				<a href="<?=base_url()?>"><img src="<?=base_url()?>static/images/icons/house_go.png" class="icon" /> Go Home</a>
 			<?php }?>
+			
 			<pre>
 <?=$raw?>
 			</pre>
-			<?php if(!$this->db_session->userdata("view_raw")){?><a href="<?=site_url("view/".$pid)?>">Go Back</a><?php } else { ?><a href="<?=base_url()?>">Go Home</a><?php }?>		
+			
+			<?php if(!$this->db_session->userdata("view_raw")){?>
+				<a href="<?=site_url("view/".$pid)?>"><img src="<?=base_url()?>static/images/icons/arrow_left.png" class="icon" /> Go Back</a>
+			<?php } else { ?>
+				<a href="<?=base_url()?>"><img src="<?=base_url()?>static/images/icons/house_go.png" class="icon" /> Go Home</a>
+			<?php }?>
+			
 		</div>
+		
 		<?php $this->load->view('defaults/stats'); ?>
 	</body>
 </html>

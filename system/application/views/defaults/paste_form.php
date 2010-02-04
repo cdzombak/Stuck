@@ -2,7 +2,7 @@
 	$(document).ready(function(){
 		$(".show").click(function(){
 			$(".advanced").hide();
-			$(".advanced_options").show();					
+			$(".advanced_options").show();
 			return false;
 		});
 	});
@@ -12,18 +12,14 @@
 <div class="form_wrapper margin">
 	<form action="<?=base_url()?>" method="post">
 
-		<h1><?php if(!isset($page['title'])){ ?>
-			Create a new paste
-		<?php } else { ?>
-			<?php echo $page['title']; ?>
-		<?php } ?></h1>
-		<p class="explain border"><?php if(!isset($page['instructions'])){ ?>
+		<h1 id="<?php echo isset($page['anchor']) ? $page['anchor'] : ""; ?>"><?php echo !isset($page['title']) ? 'Create a new paste' : $page['title']; ?></h1>
+		<!--<p class="explain border"><?php if(!isset($page['instructions'])){ ?>
 			Here you can create a new paste
 		<?php } else { ?>
 			<?php echo $page['instructions']; ?>
-		<?php } ?></p>								
+		<?php } ?></p>-->
 		
-		<div class="item_group">								
+		<div class="item_group">
 			<div class="item">
 				<label for="name">Author
 					<span class="instruction">What's your name?</span>
@@ -73,15 +69,16 @@
 		
 			<div class="item">
 				<label for="private">Private
-					<span class="instruction">Private paste aren't shown in recent listings.</span>
+					<span class="instruction"><?php if ($isReplyToPrivate) { ?>This is a reply to a private post; your reply should probably be private as well.<? } else { ?>Private pastes aren't shown in recent listings.<? } ?></span>
 				</label>
 				<div class="text_beside">
 					<?php
+						if ($isReplyToPrivate) $private_set = TRUE;
 						$set = array('name' => 'private', 'id' => 'private', 'tabindex' => '6', 'value' => '1', 'checked' => $private_set);
 						echo form_checkbox($set);
 					?><p>Make Private</p>
 				</div>
-			</div>						
+			</div>
 		
 			<div class="item">
 				<label for="expire">Delete After
@@ -105,20 +102,20 @@
 		
 		<div class="item advanced">
 			<p>Feeling clever? Set some <a href="#" class="show control">advanced</a> options.</p>
-		</div>					
+		</div>
 		
-		<div class="advanced_options hidden item_group">																
+		<div class="advanced_options hidden item_group">
 			<div class="item">
 				<label for="acopy">Auto Copy Link
 					<span class="instruction">Auto-copy the link to your clipboard?</span>
 				</label>
-				<div class="text_beside">					
+				<div class="text_beside">
 					<?php
 						$set = array('name' => 'acopy', 'id' => 'acopy', 'tabindex' => '8', 'value' => '1', 'checked' => $acopy_set);
 						echo form_checkbox($set);
 					?>
-					<p>Auto copy link</p>										
-				</div>				
+					<p>Auto copy link</p>
+				</div>
 			</div>
 			
 			<div class="item last">

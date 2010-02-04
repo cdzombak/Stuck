@@ -265,7 +265,7 @@ class Main extends Controller
 		$this->load->model('pastes');
 
 		$check = $this->pastes->checkPaste(2);
-				
+		
 		if($check)
 		{
 			

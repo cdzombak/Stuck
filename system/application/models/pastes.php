@@ -265,6 +265,7 @@ class Pastes extends Model
 			$data['raw'] = $row['raw'];
 			$data['snipurl'] = $row['snipurl'];
 			$data['filename'] = $row['filename'];
+			$data['private'] = ($row['private']==1) ? TRUE : FALSE;
 			$inreply = $row['replyto'];
 		}
 		

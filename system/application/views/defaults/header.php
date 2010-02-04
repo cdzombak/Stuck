@@ -16,7 +16,7 @@
 	</head>
 	<body>
 		<div id="container">
-			<div class="container">			
+			<div class="container">
 				<div class="header">
 					<h1><a href="<?=base_url()?>" class="title"><?php echo $this->config->item('site_name');?></a></h1>
 					<ul class="tabs">
@@ -33,11 +33,11 @@
 							$(document).ready(function(){
 								$(".change").oneTime(3000, function() {
 								$(this).fadeOut(2000);
-							});						
+							});
 						});</script>
 						<div class="message success change">
 							<div class="container">
 								<?php echo($status_message); ?>
 							</div>
 						</div>
-						<?php }?>				
+						<?php }?>

@@ -33,7 +33,7 @@ a:hover {
 
 h1, h2, h3 ,h4 {
 	font-weight: bold;
-	color: #000;
+	color: #111;
 }
 
 h1 {
@@ -98,20 +98,25 @@ h4 {
 }
 
 /* !Content */
-.content {	
-	margin-top: 10px;	
+.content {
+	margin-top: 10px;
 	float: left;
+	margin-bottom: 10px;
 }
 
-.replies {
-	margin: 10px auto;
+#replies , #reply {
+	margin: 0 auto 10px auto;
+	border: 3px solid #cfD4DC;
 }
 
-.replies, .content {
+#replies, .content, #reply {
 	width: 874px;
 	clear: both;
 	background-color: #fff;	
-	border: 3px solid #D6DBE4;
+}
+
+.content {  /* @TODO find out what content is and why it only affects paste */
+	border: 3px solid #444;
 }
 
 /* !Forms */
@@ -165,7 +170,6 @@ h4 {
 	text-align: center;
 	color: #333;
 	margin-top: 20px;
-	/*margin-left: 140px;*/
 	font-size: 93%;
 }
 
@@ -335,19 +339,57 @@ h4 {
 }
 
 .recent .even {
-	background-color: #F1F5FA;
+	background-color: #f9f9f9;
 }
 
 /* !Pastes */
+.paste_info {
+	padding: 0 5px 5px 5px;
+}
+
+.paste_info h1 .icon {
+	padding: 1px 6px 0 0;
+}
+
+.paste_info .pagetitle {
+	font-size: 150%;
+	font-family: Helvetica;
+}
+
+.paste_info .info {
+	float: left;
+	width: 550px;
+}
+
+.paste_info .actions {
+	width: 290px;
+	float: left;
+	padding: 5px 0;
+}
+
+.actions li {
+	display: block;
+	padding-bottom: 10px;
+	font-size: 90%;
+}
+
+.actions li a {
+	color: #111;
+}
+
+.actions li a:hover, .actions li a.active {
+	color: #000;
+}
+
+.actions li .icon {
+	padding: 2px 10px 0px 0px;
+	float: left;
+}
+
 .meta {
 	font-size: 93%;
 	line-height: 18px;
-}
-
-.meta .spacer, .spacer.high {
-	height: 10px;
-	width: 100%;
-	clear: both;	
+	padding-bottom: 10px;
 }
 
 .detail {
@@ -356,36 +398,35 @@ h4 {
 	clear: both;
 }
 
-.detail.by {
+.detail.reply {
 	font-style: italic;
-	color: #333;
+	margin-left: -1px;
 }
 
 .detail .item {
-	color: #333;
-	width: 50px;
+	width: 5.5em;
 	display: block;
 	float: left;
 }
 
 .paste {
-	margin: 0 auto;
+	margin: 10px auto;
 	width: 900px;
 	font-size: 100%;
 }
 
 .paste.full {
-	width: 90%;
+	width: 95%;
 }
 
 .paste .text_formatted {
 	clear: both;
-	float: left;
 	width: 874px;
-	border: 3px solid #D5DAE3;
-	margin-top: 10px;
+	border: 3px solid #cfD4DC;
+	/*clear: both;
+	margin-top: 10px;*/
 	margin-left: 10px;
-	background: #ebf4fb;
+	background: #fff;
 }
 
 .paste .text_formatted.full {
@@ -426,6 +467,7 @@ h4 {
 }
 
 /* About Page */
+/*
 .about {
 	line-height: 18px;
 }
@@ -458,7 +500,7 @@ h4 {
 	padding-left: 10px;
 	padding-top: 4px;
 	padding-bottom: 4px;
-}
+}*/
 
 /* !Footer */
 .footer {

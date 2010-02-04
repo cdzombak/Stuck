@@ -1,15 +1,19 @@
-* Interface more like http://stikked.com/
-* export new mysql structure, languages
-* no longer need cron
 * search codebase for @TODO
-* make snipurl optional
-* fix copy to clipboard
-* generate download filenames better
-* Reply to private posts should automatically be set to Private
-* Nicer reply handling
+* make snipurl optional/fix it
+* fix copy to clipboard (disable if using Flash 10+)
 * Confirm when someone wants to post as anon
 * option for public read-only access; require key to post
 * language ordering in the DB
 * AJAX interaction
 * Fix iPhone view issues
 * change iPhone view to Mobile View
+* new coding conventions
+* integrate with my shortURL app
+
+Markup/CSS/Appearance:
+* nicer fonts, especially for titles
+* clean CSS and markup; move away from hardcoding pixel values, containers, etc.
+* better-looking recent list
+* better-looking messages
+* better-looking header
+* better handling of various content page types (no crazy borders, etc.)

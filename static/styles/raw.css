@@ -11,9 +11,31 @@ body {
 	font-size: 14px;
 }
 
+h1 {
+	margin-bottom: 7px;
+}
+
+h1 .icon {
+	position: relative;
+	top: -2px;
+	padding-right: 8px;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a img {
+	border: none;
+}
+
 #container {
 	width: 95%;
-	margin: 20px auto;	
+	margin: 20px auto;
 }
 
 pre {
@@ -21,4 +43,9 @@ pre {
 	padding: 5px;
 	font-family: monospace;
 	overflow: auto;
+}
+
+a img.icon {
+	position: relative;
+	top: 2px;
 }
