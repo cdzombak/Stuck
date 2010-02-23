@@ -23,7 +23,7 @@
 		<h1 class="pagetitle right"><? if ($private) { ?><img src="<?=base_url()?>static/images/icons/lock.png" class="icon" alt="This paste is private." title="This paste is private." /><? } ?><?=$title?></h1>
 		<div class="meta">
 			<span class="detail">By <strong><?=$name?></strong>, <? $p = explode(',', timespan($created, time())); echo $p[0]?> ago</span>
-			<?php if(isset($inreply)){?><span class="detail reply">This paste is a reply to <a href="<?php echo $inreply['url']?>"><?php echo $inreply['title']; ?></a> by <?php echo $inreply['name']; ?></span><?php }?>
+			<?php if(isset($inreply)){?><span class="detail"><span class="item">In Reply To: </span><strong><a href="<?php echo $inreply['url']?>"><?php echo $inreply['title']; ?></a></strong> by <?php echo $inreply['name']; ?></span><?php }?>
 			<span class="detail"><span class="item">Language: </span><strong><?=$lang?></strong></span>
 			<span class="detail"><span class="item">URL: </span><a href="<?=$url?>"><?=$url?></a></span>
 			<?php if(!empty($snipurl)){?>
@@ -35,6 +35,7 @@
 	
 	<ul class="actions">
 		<li><img src="<?=base_url()?>static/images/icons/disk.png" class="icon" /><a href="<?=site_url("view/download/".$pid)?>">Download Paste</a> <em>(<?=$filename?>)</em></li>
+		<?php if(isset($inreply)){?><li><img src="<?=base_url()?>static/images/icons/arrow_up.png" class="icon" /><a href="<?php echo $inreply['url']?>">View Parent</a><?php }?>
 		<? if(isset($replies) and !empty($replies)) { ?><li><img src="<?=base_url()?>static/images/icons/comments.png" class="icon" /><a href="#replies">View Replies</a> to this paste</li><? } ?>
 		<li><img src="<?=base_url()?>static/images/icons/comment_add.png" class="icon" /><a href="#reply">Reply</a> to this paste</li>
 		<li><img src="<?=base_url()?>static/images/icons/page_white_text.png" class="icon" /><a href="<?=site_url("view/raw/".$pid)?>">View Raw</a></li>

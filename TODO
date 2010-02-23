@@ -1,17 +1,16 @@
 * Project name, licensing, github
 * Fix iPhone view issues, change iPhone view to Mobile View
-* fix copy to clipboard (disable if using Flash 10+)
-* add View Parent link to paste actions menu
 * search codebase for @TODO
-* Update models
+* Update models, clean up code in general (passing arrays around, etc.)
 * upgrade CI
-* upgrade jQuery, clipboard helper
+* eliminate clipboard helper
 * new coding conventions
 * Confirm when someone wants to post as anon
 * option for public read-only access; require key to post
 * make snipurl optional/fix it/use models, etc
 * language ordering in the DB
 * auto-link URLs
+* Allow diffs between parents/replies
 
 Markup/CSS/Appearance:
 * nicer fonts, especially for titles

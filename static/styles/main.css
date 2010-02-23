@@ -404,7 +404,7 @@ h4 {
 }
 
 .detail .item {
-	width: 5.5em;
+	width: 6.5em;
 	display: block;
 	float: left;
 }
@@ -465,42 +465,6 @@ h4 {
 .message .container {
 	padding: 5px;
 }
-
-/* About Page */
-/*
-.about {
-	line-height: 18px;
-}
-
-.about h1.space {
-	margin-top: 10px;
-	float: left;
-	clear: both;
-	width: 100%;
-}
-
-.about p, .about ul, .about code {
-	margin-bottom: 10px;
-}
-
-.about ul, .about code {
-	margin-left: 20px;
-}
-
-.about ul li {
-	list-style-type: disc;
-	list-style-position: inside;
-}
-
-.about code {
-	width: 100%;
-	clear: both;
-	display: block;
-	border-left: 3px solid #aaa;
-	padding-left: 10px;
-	padding-top: 4px;
-	padding-bottom: 4px;
-}*/
 
 /* !Footer */
 .footer {
