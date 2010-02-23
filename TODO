@@ -4,13 +4,14 @@
 * add View Parent link to paste actions menu
 * search codebase for @TODO
 * Update models
-* upgrae CI
+* upgrade CI
 * upgrade jQuery, clipboard helper
 * new coding conventions
 * Confirm when someone wants to post as anon
 * option for public read-only access; require key to post
-* make snipurl optional/fix it/integrate with my shortURL app
+* make snipurl optional/fix it/use models, etc
 * language ordering in the DB
+* auto-link URLs
 
 Markup/CSS/Appearance:
 * nicer fonts, especially for titles

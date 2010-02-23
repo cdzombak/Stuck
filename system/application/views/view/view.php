@@ -3,11 +3,12 @@
 <script type="text/javascript" charset="utf-8">
 	$(document).ready(function(){
 		$(".expand").click(function(){
-			$(".paste").css("width", "95%");
 			$(".text_formatted").hide();
+			$(".paste").css("width", "95%");
 			$(".text_formatted").css("width", "100%");
 			$(".text_formatted").css("margin-left", "0");
 			$(".text_formatted").fadeIn(500);
+			$("#expandPasteLink").fadeTo(500, 0, function() { $("#expandPasteLink").css("visibility", "hidden"); return false; } );
 			return false;
 		});
 	});
@@ -37,7 +38,7 @@
 		<? if(isset($replies) and !empty($replies)) { ?><li><img src="<?=base_url()?>static/images/icons/comments.png" class="icon" /><a href="#replies">View Replies</a> to this paste</li><? } ?>
 		<li><img src="<?=base_url()?>static/images/icons/comment_add.png" class="icon" /><a href="#reply">Reply</a> to this paste</li>
 		<li><img src="<?=base_url()?>static/images/icons/page_white_text.png" class="icon" /><a href="<?=site_url("view/raw/".$pid)?>">View Raw</a></li>
-		<li><img src="<?=base_url()?>static/images/icons/arrow_out.png" class="icon" /><a href="#" class="expand">Expand Paste</a> to fill browser</li>
+		<li id="expandPasteLink"><img src="<?=base_url()?>static/images/icons/arrow_out.png" class="icon" /><a href="#" class="expand">Expand Paste</a> to fill browser</li>
 	</ul>
 </div>
 
