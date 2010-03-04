@@ -1,10 +1,11 @@
-* search codebase for @TODO
 * Page titles
 * eliminate clipboard helper
 * Confirm when someone wants to post as anon
 * option for public read-only access; require key to post
 * make snipurl optional/fix it/use models, etc
 * language ordering in the DB
+ * generally, update Languages model
+ * then, update Pastes::generateFilename()
 * auto-link URLs
 * Allow diffs between parents/replies
 * versioning, etc.

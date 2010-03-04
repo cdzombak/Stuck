@@ -180,12 +180,11 @@ class Pastes extends Model
 	}
 	
 	function generateFilename($name, $type) {
-		// @TODO fix this function to work correctly
 		$special_chars = array("?","[","]","/","\\","=","+","<",">",":",";",",","'");
 		$name = str_replace($special_chars,"",$name);
 		$name = str_replace(' ','_',$name);
-		$name = trim($name,".");
-		$name = substr($name,0,127); 
+		$name = trim($name,'.');
+		$name = substr($name,0,123); 
 		$name .= '.' . strtolower($type);
 		return $name;
 	}
