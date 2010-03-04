@@ -13,7 +13,6 @@
 * Main model class for pastes table/stikked.
 *
 * @author Ben McRedmond <hello@benmcredmond.com>
-* @version 0.5.1
 * @access public
 * @copyright Ben McRedmond
 * @package Stikked

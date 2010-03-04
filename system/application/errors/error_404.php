@@ -1,4 +1,4 @@
-<?php header("HTTP/1.1 404 Not Found"); 
+<?php
 	include("system/application/config/config.php"); 
 	include("system/application/config/stikked.php");
 ?>

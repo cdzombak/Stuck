@@ -1,8 +1,6 @@
-* Project name, licensing, github
 * Fix iPhone view issues, change iPhone view to Mobile View
 * search codebase for @TODO
 * Update models, clean up code in general (passing arrays around, etc.)
-* upgrade CI
 * eliminate clipboard helper
 * new coding conventions
 * Confirm when someone wants to post as anon
@@ -11,6 +9,8 @@
 * language ordering in the DB
 * auto-link URLs
 * Allow diffs between parents/replies
+* versioning, etc.
+* documentation
 
 Markup/CSS/Appearance:
 * nicer fonts, especially for titles

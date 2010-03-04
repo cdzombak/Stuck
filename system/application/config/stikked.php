@@ -1,13 +1,5 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-// 
-//  Stikked Config File
-//  stikked
-//  
-//  Created by Ben McRedmond on 2008-01-25.
-//  Copyright 2008 HiPPstr. All rights reserved.
-// 
-
 /**
  * Site Name
  */

@@ -15,6 +15,7 @@ CREATE TABLE IF NOT EXISTS `ci_sessions` (
   `user_agent` varchar(50) character set utf8 NOT NULL,
   `last_activity` int(10) unsigned NOT NULL default '0',
   `session_data` text character set utf8 NOT NULL,
+  `user_data` text character set utf8 NOT NULL,
   PRIMARY KEY  (`session_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ;
 
