@@ -1,12 +1,22 @@
 UPGRADING
 
+In general:
+
+  (1) Pull in the latest code from git.
+
+  (2) Replace your application's code with the new code.
+      You shouldn't lose anything here unless you modified the application files; all your data are stored in the database.
+
+  Your site-specific config files are distributed with a .dist on their filenames, meaning your existing files won't be overwritten.
+  (3) You should compare:
+        /system/application/config/config.php
+		/system/application/config/database.php
+		/system/application/config/stikked.php
+		/.htaccess
+	  with the new .dist versions to see if any new options have been added which you might like (or need) to change.
+
 To upgrade from versions before and including fc8ddef7 on 2010-02-23, you need to perform the following:
+  (1) Pull in the latest code as described above.
 
-(1) Pull in the latest code from git.
-    Replace your application's code with the new stuff, taking care not to overwrite your configuration files or .htaccess.
-    You shouldn't lose anything here unless you modified the application files; all your data are stored in the database.
-
-(2) Run the following MySQL query in your Stuck database:
-      ALTER TABLE `ci_sessions` ADD `user_data` text character set utf8 NOT NULL;
-
-This document will be updated later to be much more detailed.
+  (2) Run the following MySQL query in your Stuck database:
+        ALTER TABLE `ci_sessions` ADD `user_data` text character set utf8 NOT NULL;
