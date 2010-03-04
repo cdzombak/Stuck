@@ -1,8 +1,6 @@
-* Fix iPhone view issues, change iPhone view to Mobile View
 * search codebase for @TODO
-* Update models, clean up code in general (passing arrays around, etc.)
+* Page titles
 * eliminate clipboard helper
-* new coding conventions
 * Confirm when someone wants to post as anon
 * option for public read-only access; require key to post
 * make snipurl optional/fix it/use models, etc
@@ -11,6 +9,8 @@
 * Allow diffs between parents/replies
 * versioning, etc.
 * documentation
+* Update models, clean up code in general (passing arrays around, etc.)
+* new coding conventions
 
 Markup/CSS/Appearance:
 * nicer fonts, especially for titles

@@ -1,7 +1,7 @@
 <?php
 
 /** 
-* iPhone Controller for Stikked
+* Mobile Controller for Stikked
 * 
 * @author Ben McRedmond <hello@benmcredmond.com>
 * @copyright Ben McRedmond
@@ -10,10 +10,9 @@
 */
 
 /** 
-* iPhone controller class for stikked.
+* Mobile controller class for stikked.
 *
 * @author Ben McRedmond <hello@benmcredmond.com>
-* @version 0.5.1
 * @access public
 * @copyright Ben McRedmond
 * @package Stikked
@@ -21,7 +20,7 @@
 *
 */
 
-class Iphone extends Controller 
+class Mobile extends Controller 
 {
 	
 	/** 
@@ -29,40 +28,38 @@ class Iphone extends Controller
 	*
 	* @return void
 	*/
-	
 	function __construct() 
 	{
 		parent::__construct();
+		$this->load->model('languages');
 	}
 	
 	
 	/** 
-	* Displays recent pastes in an iPhone optimized version.
+	* Displays recent pastes in a mobile optimized version.
 	*
 	* @return void
 	* @access public
 	*/
-	
 	function index()
 	{
 		$this->load->model('pastes');
-		$data = $this->pastes->getLists('iphone/');
-		$this->load->view('iphone/recent', $data);
+		$data = $this->pastes->getLists('mobile/');
+		$this->load->view('mobile/recent', $data);
 	}
 	
 	
 	/** 
-	* Displays an individual paste in an iPhone optimized version.
+	* Displays an individual paste in a mobile optimized version.
 	*
 	* @return void
 	* @access public
 	*/
-	
 	function view()
 	{
 		$this->load->model('pastes');
 		$data = $this->pastes->getPaste(3);
-		$this->load->view('iphone/view', $data);
+		$this->load->view('mobile/view', $data);
 	}
 }
 

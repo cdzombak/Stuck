@@ -231,7 +231,7 @@ class Pastes extends Model
 	* Gets a specific paste from the database and all its related meta-data
 	*
 	* @param int $seg URL Segment which the paste id is in
-	* @param bool|string $replies False if you don't want to retrieve replies from the database. Paste ID if you do want to retrieve replies from database. Mostly here for legacy support, eg. iPhone views.
+	* @param bool|string $replies False if you don't want to retrieve replies from the database. Paste ID if you do want to retrieve replies from database.
 	* @return array
 	* @access public
 	*/
