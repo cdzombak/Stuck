@@ -339,14 +339,18 @@ class CI_DB_postgre_driver extends CI_DB {
 		}
 		elseif ($table != null && $column != null && $v >= '8.0')
 		{
+			// PostgreSQL returns also schema.table from pg_get_serial_sequence
+			// regexp_replace removes schema name and dot in order to get sequence name
 			$sql = sprintf("SELECT regexp_replace(pg_get_serial_sequence('%s','%s'),E'^.*\\\\.','') as seq", $table, $column);
 			$query = $this->query($sql);
 			$row = $query->row();
+			// Get next id (to be inserted)
 			$sql = sprintf("SELECT NEXTVAL('%s') as ins_id", $row->seq);
 		}
 		elseif ($table != null)
 		{
 			// seq_name passed in table parameter
+			// TODO: This should not work at all.
 			$sql = sprintf("SELECT NEXTVAL('%s') as ins_id", $table);
 		}
 		else

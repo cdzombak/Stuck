@@ -1,3 +1,6 @@
+--- SQL Files for PostgreSQL
+--- Constaints and specific types
+
 --
 -- Table structure for table ci_sessions
 --
