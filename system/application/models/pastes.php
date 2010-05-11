@@ -173,7 +173,9 @@ class Pastes extends Model
 			}
 		}
 		
-		$data['paste'] = $this->process->syntax($this->input->post('code'), $this->input->post('lang'));
+		$data['paste'] = $this->process->syntax($this->input->post('code'), $this->input->post('lang'));		
+		$data['id']=$this->db->insert_id('pastes','id');
+
 		$this->db->insert('pastes', $data);
 
 		return 'view/'.$data['pid'];
