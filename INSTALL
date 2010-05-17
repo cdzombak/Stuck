@@ -6,16 +6,28 @@ Installing Stuck right now isn't exactly trivial, but it's manageable if you hav
 
 (0) Check system requirements:
     (0.1) PHP 5+
-	(0.2) MySQL
+	(0.2) MySQL or PostgreSQL
 	(0.3) Apache
 
 (1) Download the latest version from http://github.com/cdzombak/stuck
 	
-(2) Create a database and user for Stuck using phpMyAdmin, the MySQL Administration CLI, or another MySQL interface.
+(2) Create a database and user for Stuck 
+	(2.1) For MySQL using phpMyAdmin, the MySQL Administration CLI, or another MySQL interface.
+	(2.2) For PostgreSQL using phpPgAdmin, the PostgreSQL cli tools or another PostgreSQL interface (pgAdminIII)
+		(2.2.1) Using CLI :
+			# Create a specific user for db
+			createuser stuck
+			# Create the stuck db owned by stuck user
+			createdb -O stuck stuck
+			# Verify your pg_hba.conf file for Stuck database to be accessed by stuck user from 
+			# stuck web server ip address.
 
 (3) Import the database structure. You can use this command:
+	(3.1) For MySQL
 	  mysql -u username -p databasename < mysql.sql
 	or you can copy/paste the mysql.sql file into phpMyAdmin or your MySQL GUI of choice.
+	(3.2) For PostgreSQL
+	  psql -U stuck stuck < pgsql.sql
 
 (4) Configure Stikked
 	(4.1) Edit /system/application/config/config.php.dist
