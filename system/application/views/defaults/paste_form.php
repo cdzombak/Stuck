@@ -69,11 +69,11 @@
 		
 			<div class="item">
 				<label for="private">Private
-					<span class="instruction"><?php if (isset($isReplyToPrivate)) { ?>This is a reply to a private post; your reply should probably be private as well.<?php } else { ?>Private pastes aren't shown in recent listings.<?php } ?></span>
+					<span class="instruction"><?php if (isset($isReplyToPrivate) && $isReplyToPrivate) { ?>This is a reply to a private post; your reply should probably be private as well.<?php } else { ?>Private pastes aren't shown in recent listings.<?php } ?></span>
 				</label>
 				<div class="text_beside">
 					<?php
-						if (isset($isReplyToPrivate)) $private_set = TRUE;
+						if (isset($isReplyToPrivate) && $isReplyToPrivate) $private_set = TRUE;
 						$set = array('name' => 'private', 'id' => 'private', 'tabindex' => '6', 'value' => '1', 'checked' => $private_set);
 						echo form_checkbox($set);
 					?><p>Make Private</p>
