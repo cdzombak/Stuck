@@ -5,10 +5,10 @@
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 		<title><?php echo $this->config->item('site_name');?></title>
-		<link rel="stylesheet" href="<?=base_url()?>static/styles/raw.css" type="text/css" media="screen" title="raw stylesheet" charset="utf-8" />
+		<link rel="stylesheet" href="<?php echo base_url();?>static/styles/raw.css" type="text/css" media="screen" title="raw stylesheet" charset="utf-8" />
 		<?php if(!empty($scripts)){?>
 		<?php foreach($scripts as $script){?>
-		<script src="<?=base_url()?>static/js/<?=$script?>" type="text/javascript"></script>
+		<script src="<?php echo base_url();?>static/js/<?=$script?>" type="text/javascript"></script>
 		<?}}?>
 	</head>
 	<body>
@@ -18,22 +18,22 @@
 				echo $insert;
 			}?>
 			
-			<h1><? if ($private) { ?><img src="<?=base_url()?>static/images/icons/lock.png" class="icon" alt="This paste is private." title="This paste is private." /><? } ?><?=$title?></h1>
+			<h1><?php if ($private) { ?><img src="<?php echo base_url();?>static/images/icons/lock.png" class="icon" alt="This paste is private." title="This paste is private." /><?php } ?><?php echo $title;?></h1>
 			
 			<?php if(!$this->db_session->userdata("view_raw")){?>
-				<a href="<?=site_url("view/".$pid)?>"><img src="<?=base_url()?>static/images/icons/arrow_left.png" class="icon" /> Go Back</a>
+				<a href="<?php echo site_url("view/".$pid);?>"><img src="<?php echo base_url();?>static/images/icons/arrow_left.png" class="icon" /> Go Back</a>
 			<?php } else { ?>
-				<a href="<?=base_url()?>"><img src="<?=base_url()?>static/images/icons/house_go.png" class="icon" /> Go Home</a>
+				<a href="<?php echo base_url();?>"><img src="<?php echo base_url();?>static/images/icons/house_go.png" class="icon" /> Go Home</a>
 			<?php }?>
 			
 			<pre>
-<?=$raw?>
+<?php echo $raw;?>
 			</pre>
 			
 			<?php if(!$this->db_session->userdata("view_raw")){?>
-				<a href="<?=site_url("view/".$pid)?>"><img src="<?=base_url()?>static/images/icons/arrow_left.png" class="icon" /> Go Back</a>
+				<a href="<?=site_url("view/".$pid)?>"><img src="<?php echo base_url();?>static/images/icons/arrow_left.png" class="icon" /> Go Back</a>
 			<?php } else { ?>
-				<a href="<?=base_url()?>"><img src="<?=base_url()?>static/images/icons/house_go.png" class="icon" /> Go Home</a>
+				<a href="<?php echo base_url();?>"><img src="<?php echo base_url();?>static/images/icons/house_go.png" class="icon" /> Go Home</a>
 			<?php }?>
 			
 		</div>

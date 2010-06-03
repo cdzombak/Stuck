@@ -20,26 +20,26 @@
 
 <div class="paste_info">
 	<div class="info">
-		<h1 class="pagetitle right"><? if ($private) { ?><img src="<?=base_url()?>static/images/icons/lock.png" class="icon" alt="This paste is private." title="This paste is private." /><? } ?><?=$title?></h1>
+		<h1 class="pagetitle right"><?php if ($private) { ?><img src="<?php echo base_url();?>static/images/icons/lock.png" class="icon" alt="This paste is private." title="This paste is private." /><?php } ?><?php echo $title;?></h1>
 		<div class="meta">
-			<span class="detail">By <strong><?=$name?></strong>, <? $p = explode(',', timespan($created, time())); echo $p[0]?> ago</span>
+			<span class="detail">By <strong><?php echo $name;?></strong>, <?php $p = explode(',', timespan($created, time())); echo $p[0]?> ago</span>
 			<?php if(isset($inreply)){?><span class="detail"><span class="item">In Reply To: </span><strong><a href="<?php echo $inreply['url']?>"><?php echo $inreply['title']; ?></a></strong> by <?php echo $inreply['name']; ?></span><?php }?>
-			<span class="detail"><span class="item">Language: </span><strong><?=$lang?></strong></span>
-			<span class="detail"><span class="item">URL: </span><a href="<?=$url?>"><?=$url?></a></span>
+			<span class="detail"><span class="item">Language: </span><strong><?php echo $lang;?></strong></span>
+			<span class="detail"><span class="item">URL: </span><a href="<?php echo $url;?>"><?php echo $url;?></a></span>
 			<?php if(!empty($snipurl)){?>
-				<span class="detail"><span class="item">Snipurl: </span><a href="<?=$snipurl?>"><?php echo htmlspecialchars($snipurl) ?></a></span>
+				<span class="detail"><span class="item">Snipurl: </span><a href="<?php echo $snipurl;?>"><?php echo htmlspecialchars($snipurl) ?></a></span>
 			<?php }?>
-			<!--<span class="detail"><span class="item">Filename: </span><a href="<?=site_url("view/download/".$pid)?>"><?=$filename?></a></span>-->
+			<!--<span class="detail"><span class="item">Filename: </span><a href="<?php echo site_url("view/download/".$pid);?>"><?php echo $filename;?></a></span>-->
 		</div>
 	</div>
 	
 	<ul class="actions">
-		<li><img src="<?=base_url()?>static/images/icons/disk.png" class="icon" /><a href="<?=site_url("view/download/".$pid)?>">Download Paste</a> <em>(<?=$filename?>)</em></li>
-		<?php if(isset($inreply)){?><li><img src="<?=base_url()?>static/images/icons/arrow_up.png" class="icon" /><a href="<?php echo $inreply['url']?>">View Parent</a><?php }?>
-		<? if(isset($replies) and !empty($replies)) { ?><li><img src="<?=base_url()?>static/images/icons/comments.png" class="icon" /><a href="#replies">View Replies</a> to this paste</li><? } ?>
-		<li><img src="<?=base_url()?>static/images/icons/comment_add.png" class="icon" /><a href="#reply">Reply</a> to this paste</li>
-		<li><img src="<?=base_url()?>static/images/icons/page_white_text.png" class="icon" /><a href="<?=site_url("view/raw/".$pid)?>">View Raw</a></li>
-		<li id="expandPasteLink"><img src="<?=base_url()?>static/images/icons/arrow_out.png" class="icon" /><a href="#" class="expand">Expand Paste</a> to fill browser</li>
+		<li><img src="<?php echo base_url();?>static/images/icons/disk.png" class="icon" /><a href="<?php echo site_url("view/download/".$pid);?>">Download Paste</a> <em>(<?php echo $filename;?>)</em></li>
+		<?php if(isset($inreply)){?><li><img src="<?php echo base_url();?>static/images/icons/arrow_up.png" class="icon" /><a href="<?php echo $inreply['url']?>">View Parent</a><?php }?>
+		<?php if(isset($replies) and !empty($replies)) { ?><li><img src="<?php echo base_url();?>static/images/icons/comments.png" class="icon" /><a href="#replies">View Replies</a> to this paste</li><?php } ?>
+		<li><img src="<?php echo base_url();?>static/images/icons/comment_add.png" class="icon" /><a href="#reply">Reply</a> to this paste</li>
+		<li><img src="<?php echo base_url();?>static/images/icons/page_white_text.png" class="icon" /><a href="<?php echo site_url("view/raw/".$pid);?>">View Raw</a></li>
+		<li id="expandPasteLink"><img src="<?php echo base_url();?>static/images/icons/arrow_out.png" class="icon" /><a href="#" class="expand">Expand Paste</a> to fill browser</li>
 	</ul>
 </div>
 
@@ -51,12 +51,12 @@
 <div class="paste <?php if($full_width){ echo "full"; }?>">
 	<div class="text_formatted <?php if($full_width){ echo "full"; }?>">
 		<div class="container">
-			<?=$paste?>
+			<?php echo $paste;?>
 		</div>
 	</div>
 </div>
 
-<? if(isset($replies) and !empty($replies)) { ?>
+<?php if(isset($replies) and !empty($replies)) { ?>
 <div id="replies">
 	<div class="container">
 		<?php
@@ -87,10 +87,10 @@
 					$n++;
 			?>
 				
-				<tr class="<?=$eo?>">
-					<td class="first"><a href="<?=site_url('view/'.$reply['pid'])?>"><?=$reply['title']?></a></td>
-					<td><?=$reply['name']?></td>
-					<td><? $p = explode(",", timespan($reply['created'], time())); echo $p[0];?> ago.</td>
+				<tr class="<?php echo $eo;?>">
+					<td class="first"><a href="<?php echo site_url('view/'.$reply['pid']);?>"><?php echo $reply['title'];?></a></td>
+					<td><?php echo $reply['name'];?></td>
+					<td><?php $p = explode(",", timespan($reply['created'], time())); echo $p[0];?> ago.</td>
 				</tr>
 		
 			<?php }?>
@@ -100,7 +100,7 @@
 		<?php }?>
 	</div>
 </div>
-<? } ?>
+<?php } ?>
 
 <div id="reply">
 	<div class="container">

@@ -5,25 +5,25 @@
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 		<title><?php echo $this->config->item('site_name');?></title>
-		<link rel="stylesheet" href="<?=base_url()?>static/styles/reset.css" type="text/css" />
-		<link rel="stylesheet" href="<?=base_url()?>static/styles/fonts.css" type="text/css" />
-		<link rel="stylesheet" href="<?=base_url()?>static/styles/main.css" type="text/css" media="screen" title="main" charset="utf-8" />
+		<link rel="stylesheet" href="<?php echo base_url();?>static/styles/reset.css" type="text/css" />
+		<link rel="stylesheet" href="<?php echo base_url();?>static/styles/fonts.css" type="text/css" />
+		<link rel="stylesheet" href="<?php echo base_url();?>static/styles/main.css" type="text/css" media="screen" title="main" charset="utf-8" />
 	
 		<?php if(!empty($scripts)){?>
 		<?php foreach($scripts as $script){?>
-		<script src="<?=base_url()?>static/js/<?=$script?>" type="text/javascript"></script>
-		<?}}?>		
+		<script src="<?php echo base_url();?>static/js/<?php echo $script;?>" type="text/javascript"></script>
+		<?php }}?>
 	</head>
 	<body>
 		<div id="container">
 			<div class="container">
 				<div class="header">
-					<h1><a href="<?=base_url()?>" class="title"><?php echo $this->config->item('site_name');?></a></h1>
+					<h1><a href="<?php echo base_url();?>" class="title"><?php echo $this->config->item('site_name');?></a></h1>
 					<ul class="tabs">
 						<?php $l = $this->uri->segment(1)?>
-						<li><a <?php if($l == ''){ echo 'class="active"'; }?> href="<?=base_url()?>" title="Create A New Paste">Create</a></li>
-						<li><a <?php if($l == 'lists' || $l == "view" && $this->uri->segment(2) != 'options'){ echo 'class="active"'; }?> href="<?=site_url("lists")?>" title="Recent Pastes">Recent</a></li>
-						<li><a <?php if($l == 'view' && $this->uri->segment(2) == 'options'){ echo 'class="active"'; }?> href="<?=site_url("view/options/")?>" title="Viewing Options">Options</a></li>
+						<li><a <?php if($l == ''){ echo 'class="active"'; }?> href="<?php echo base_url();?>" title="Create A New Paste">Create</a></li>
+						<li><a <?php if($l == 'lists' || $l == "view" && $this->uri->segment(2) != 'options'){ echo 'class="active"'; }?> href="<?php echo site_url("lists");?>" title="Recent Pastes">Recent</a></li>
+						<li><a <?php if($l == 'view' && $this->uri->segment(2) == 'options'){ echo 'class="active"'; }?> href="<?php echo site_url("view/options/");?>" title="Viewing Options">Options</a></li>
 					</ul>
 				</div>
 

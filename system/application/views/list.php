@@ -1,7 +1,7 @@
 <?php $this->load->view('defaults/header');?>
 <h1>Recent Pastes</h1>
 
-		<?php 
+		<?php
 		function checkNum($num){
 			return ($num%2) ? TRUE : FALSE;
 		}
@@ -15,7 +15,7 @@
 						<th class="lang">Language</th>
 						<th class="time">When</th>
 					</tr>
-		<?	foreach($pastes as $paste) {
+		<?php	foreach($pastes as $paste) {
 				if(checkNum($n) == TRUE) {
 					$eo = "even";
 				} else {
@@ -24,19 +24,19 @@
 				$n++;
 		?>	
 
-		<tr class="<?=$eo?>">
-			<td class="first"><a href="<?=site_url("view/".$paste['pid'])?>"><?=$paste['title']?></a></td>
-			<td><?=$paste['name']?></td>
-			<td><?=$paste['lang']?></td>
-			<td><? $p = explode(",", timespan($paste['created'], time())); echo $p[0];?> ago.</td>
+		<tr class="<?php echo $eo;?>">
+			<td class="first"><a href="<?php echo site_url("view/".$paste['pid']);?>"><?php echo $paste['title'];?></a></td>
+			<td><?php echo $paste['name'];?></td>
+			<td><?php echo $paste['lang'];?></td>
+			<td><?php $p = explode(",", timespan($paste['created'], time())); echo $p[0];?> ago.</td>
 		</tr>
 
-		<? }?>
+		<?php }?>
 				</tbody>
 			</table> 
-		<?} else { ?>
+		<?php } else { ?>
 			<p>No recent pastes to display.</p>
-		<? }?>
-<?=$pages?>
+		<?php }?>
+<?php echo $pages;?>
 <div class="spacer"></div>
 <?php $this->load->view('defaults/footer');?>

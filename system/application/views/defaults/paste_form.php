@@ -10,7 +10,7 @@
 
 <?php if(isset($this->validation->error_string)){ echo $this->validation->error_string; }?>
 <div class="form_wrapper margin">
-	<form action="<?=base_url()?>" method="post">
+	<form action="<?php echo base_url();?>" method="post">
 
 		<h1 id="<?php echo isset($page['anchor']) ? $page['anchor'] : ""; ?>"><?php echo !isset($page['title']) ? 'Create a new paste' : $page['title']; ?></h1>
 		<!--<p class="explain border"><?php if(!isset($page['instructions'])){ ?>
@@ -69,11 +69,11 @@
 		
 			<div class="item">
 				<label for="private">Private
-					<span class="instruction"><?php if ($isReplyToPrivate) { ?>This is a reply to a private post; your reply should probably be private as well.<? } else { ?>Private pastes aren't shown in recent listings.<? } ?></span>
+					<span class="instruction"><?php if (isset($isReplyToPrivate)) { ?>This is a reply to a private post; your reply should probably be private as well.<?php } else { ?>Private pastes aren't shown in recent listings.<?php } ?></span>
 				</label>
 				<div class="text_beside">
 					<?php
-						if ($isReplyToPrivate) $private_set = TRUE;
+						if (isset($isReplyToPrivate)) $private_set = TRUE;
 						$set = array('name' => 'private', 'id' => 'private', 'tabindex' => '6', 'value' => '1', 'checked' => $private_set);
 						echo form_checkbox($set);
 					?><p>Make Private</p>
