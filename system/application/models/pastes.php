@@ -175,7 +175,6 @@ class Pastes extends Model
 		
 		$data['paste'] = $this->process->syntax($this->input->post('code'), $this->input->post('lang'));		
 		// First get unique id from sequence (serial nr)
-		// TODO: test against MySQL instance, this works for PostgreSQL
 		$data['id']=$this->db->insert_id('pastes','id');
 
 		$this->db->insert('pastes', $data);
