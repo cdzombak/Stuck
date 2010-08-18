@@ -33,7 +33,7 @@
 			<?php if(!$this->db_session->userdata("view_raw")){?>
 				<a href="<?php echo site_url("view/".$pid); ?>"><img src="<?php echo base_url();?>static/images/icons/arrow_left.png" class="icon" /> Go Back</a>
 			<?php } else { ?>
-				<a href="<?php echo base_url();? >"><img src="<?php echo base_url();?>static/images/icons/house_go.png" class="icon" /> Go Home</a>
+				<a href="<?php echo base_url(); ?>"><img src="<?php echo base_url();?>static/images/icons/house_go.png" class="icon" /> Go Home</a>
 			<?php }?>
 			
 		</div>
