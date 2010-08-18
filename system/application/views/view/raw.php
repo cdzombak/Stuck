@@ -9,7 +9,7 @@
 		<?php if(!empty($scripts)){?>
 		<?php foreach($scripts as $script){?>
 		<script src="<?php echo base_url(); ?>static/js/<?php echo $script; ?>" type="text/javascript"></script>
-		<?}}?>
+		<?php }}?>
 	</head>
 	<body>
 	
