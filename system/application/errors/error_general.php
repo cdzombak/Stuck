@@ -19,11 +19,11 @@
 		<div id="container">
 			<div class="container">
 				<div class="header">
-					<h1><a href="<?=$config['base_url']?>" class="title"><?php echo $config['site_name']?></a></h1>
+					<h1><a href="<?php echo $config['base_url']; ?>" class="title"><?php echo $config['site_name']?></a></h1>
 					<div class="tabs">
-						<li><a href="<?=$config['base_url']?>index.php">Paste</a></li>
-						<li><a href="<?=$config['base_url']?>index.php/lists">Recent</a></li>
-						<li><a href="<?=$config['base_url']?>index.php/about">About</a></li>
+						<li><a href="<?php echo $config['base_url']; ?>index.php">Paste</a></li>
+						<li><a href="<?php echo $config['base_url']; ?>index.php/lists">Recent</a></li>
+						<li><a href="<?php echo $config['base_url']; ?>index.php/about">About</a></li>
 						</ul>
 					</div>
 				</div>
@@ -31,10 +31,10 @@
 				<div class="page">
 					<div class="content">
 						<div class="container">
-							<h1><?=$heading?></h1>
+							<h1><?php echo $heading; ?></h1>
 							<div class="about">
-								<?=$message?>
-								<p><a href="<?=$config['base_url']?>">Go Home</a></p>
+								<?php echo $message; ?>
+								<p><a href="<?php echo $config['base_url']; ?>">Go Home</a></p>
 							</div>
 						</div>
 					</div>
