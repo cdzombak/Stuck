@@ -8,7 +8,7 @@
 		<link rel="stylesheet" href="<?php echo base_url();?>static/styles/raw.css" type="text/css" media="screen" title="raw stylesheet" charset="utf-8" />
 		<?php if(!empty($scripts)){?>
 		<?php foreach($scripts as $script){?>
-		<script src="<?php echo base_url();?>static/js/<?=$script?>" type="text/javascript"></script>
+		<script src="<?php echo base_url(); ?>static/js/<?php echo $script; ?>" type="text/javascript"></script>
 		<?}}?>
 	</head>
 	<body>
@@ -31,9 +31,9 @@
 			</pre>
 			
 			<?php if(!$this->db_session->userdata("view_raw")){?>
-				<a href="<?=site_url("view/".$pid)?>"><img src="<?php echo base_url();?>static/images/icons/arrow_left.png" class="icon" /> Go Back</a>
+				<a href="<?php echo site_url("view/".$pid); ?>"><img src="<?php echo base_url();?>static/images/icons/arrow_left.png" class="icon" /> Go Back</a>
 			<?php } else { ?>
-				<a href="<?php echo base_url();?>"><img src="<?php echo base_url();?>static/images/icons/house_go.png" class="icon" /> Go Home</a>
+				<a href="<?php echo base_url();? >"><img src="<?php echo base_url();?>static/images/icons/house_go.png" class="icon" /> Go Home</a>
 			<?php }?>
 			
 		</div>

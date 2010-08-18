@@ -1,10 +1,10 @@
 <?php $this->load->view("defaults/header"); ?>
 
 <div class="form_wrapper margin full">
-	<form action="<?=site_url("view/options")?>" method="post">
+	<form action="<?php echo site_url("view/options"); ?>" method="post">
 
 		<h1>Change paste viewing options</h1>
-		<p class="explain border">Here you can change your preferences for viewing pastes. Requires cookies to be enabled.</p>								
+		<p class="explain border">Here you can change your preferences for viewing pastes. Requires cookies to be enabled.</p>
 										
 		<div class="item">
 			<label for="full_width">Expand Pastes
