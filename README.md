@@ -17,6 +17,7 @@ There has not yet been a full, stable release of Stuck, though we are incrementi
 The modifications to the original Stikked software (code after and including commit 6cd9a161 on 2010-02-01) are (c) 2010 Chris Dzombak and all other contributors.  The unmodified portions of this software (code prior to and including commit 1ce2f497 on 2009-08-30) are (c) Stikked.
 
 Stuck is an open-source (GPL) PHP application which may be used under the following conditions:
+
 1. The footer message remains intact, you may add to it but not take away. Removing the current footer message breaches the license.
 2. You acknowledge that Stikked is built off the open-source CodeIgniter framework available at http://codeigniter.com which is licensed under the terms outlined in "CI_LICENSE".
 3. You acknowledge the JQuery library is included with Stikked and is dual licensed under the GPL/MIT licenses available at http://jquery.com.
