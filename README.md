@@ -28,6 +28,7 @@ A copy of the GPL is in the LICENSE file provided with this distribution.
 
 ## Thanks ##
 Thanks to:
+
 * Chris Dzombak: http://chris.dzombak.name
 * Andreas Schneider: http://www.cynapses.org
 * Jean-Christophe Arnu: http://github.com/jcarnu
