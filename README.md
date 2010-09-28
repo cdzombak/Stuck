@@ -4,9 +4,7 @@ Stuck is a simple, functional, and attractive pastebin written in PHP. It is rel
 For install instructions, see the INSTALL file provided with this distribution.
 For upgrade instructions, see the UPGRADE file provided with this distribution.
 
-This software is released by Chris Dzombak with the help of other contributors (names available in the Git commit log). It's based on Stikked by Ben McRedmond, created 2008-09-15.
-
-Stuck is based on the open-source software [Stikked](http://code.google.com/p/stikked).
+This software is released by Chris Dzombak with the help of other contributors (names available in the Git commit log). It's based on the open-source [Stikked](http://code.google.com/p/stikked) by Ben McRedmond, created 2008-09-15.
 
 ## Current Version ##
 The current and development versions are [maintained on Github](http://github.com/cdzombak/Stuck).
